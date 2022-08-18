@@ -45,7 +45,7 @@ Items at mobile will be 100% unless defines otherwise.
 Variables relate to mixin as such:
 "@include grid(xs, sm, md, lg, xl, padding);"
 ```scss
-import "minigrid.scss"
+@import "minigrid.scss";
 
 //-- Deafults within minigrid.scss
 //-- Overwrite with your own variables
