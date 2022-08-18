@@ -9,7 +9,7 @@ A very minimal grid mixin, allowing you to set your breakpoints, container and g
 ### HTML
 This is the structure as to how the layout the grid
 
-To remove gab between columns, set padding to false in scss.
+To remove gap between columns, set padding to false in scss.
 ```html
 <!--Spacing between columns-->
 <section>
