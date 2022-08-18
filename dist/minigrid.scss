@@ -1,5 +1,4 @@
 //*DEFAULTS*//
-
 //Container Widths
 $mobileWidth:95vw;
 $maxWidth: 1430px;
@@ -11,10 +10,10 @@ $screen-md: 992px;
 $screen-lg: 1230px;
 $screen-xl: 1460px;
 
+// Guttter Widths
 $gutter-width:15px;
 $gutter-width-xl:25px;
 //*************//
-
 
 /*Main Layout*/
 .container {
@@ -46,15 +45,12 @@ $gutter-width-xl:25px;
   }
 }
 
-
-//Include this on an element: @include grid(12, 6, 6, 4, 4, $padding: false);
+//Include this on an element: @include grid(12, 6, 6, 4, 4, $padding: true);
 @mixin grid($xs, $sm, $md, $lg, $xl, $padding: true) {
   width: 100%;
   position: relative;
   padding-left: if($padding, $gutter-width, 0);
   padding-right: if($padding, $gutter-width, 0);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   @media (min-width: $screen-xs) {
