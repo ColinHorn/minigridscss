@@ -1,7 +1,8 @@
 # MiniGrid.scss
 
 A very minimal grid mixin, allowing you to set your breakpoints, container and gutters in seconds.
-Declare how many columns your elements span across.
+
+Declare how many columns your elements span across within the scss.
 
 < 2kb in size.
 
