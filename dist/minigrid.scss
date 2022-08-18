@@ -1,0 +1,81 @@
+//*DEFAULTS*//
+
+//Container Widths
+$mobileWidth:95vw;
+$maxWidth: 1430px;
+
+//Screen Breakpoint Sizes
+$screen-xs: 500px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1230px;
+$screen-xl: 1460px;
+
+$gutter-width:15px;
+$gutter-width-xl:25px;
+//*************//
+
+
+/*Main Layout*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: $mobileWidth;
+  max-width: $maxWidth;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+  box-sizing: border-box;
+
+  .row {
+    margin-left: -$gutter-width;
+    margin-right: -$gutter-width;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-left: $gutter-width-xl;
+    padding-right: $gutter-width-xl;
+
+    .row {
+      margin-left: -$gutter-width-xl;
+      margin-right: -$gutter-width-xl;
+    }
+  }
+}
+
+
+//Include this on an element: @include grid(12, 6, 6, 4, 4, $padding: false);
+@mixin grid($xs, $sm, $md, $lg, $xl, $padding: true) {
+  width: 100%;
+  position: relative;
+  padding-left: if($padding, $gutter-width, 0);
+  padding-right: if($padding, $gutter-width, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  @media (min-width: $screen-xs) {
+    width: calc($xs / 12 * 100%);
+  }
+
+  @media (min-width: $screen-sm) {
+    width: calc($sm / 12 * 100%);
+  }
+
+  @media (min-width: $screen-md) {
+    width: calc($md / 12 * 100%);
+  }
+
+  @media (min-width: $screen-lg) {
+    width: calc($lg / 12 * 100%);
+  }
+
+  @media (min-width: $screen-xl) {
+    width: calc($xl / 12 * 100%);
+    padding-left: if($padding, $gutter-width-xl, 0);
+    padding-right: if($padding, $gutter-width-xl, 0);
+  }
+}
