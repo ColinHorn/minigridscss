@@ -50,7 +50,7 @@ Variables relate to mixin as such:
 ```scss
 @import "minigrid.scss";
 
-//-- Deafults within minigrid.scss
+//-- Defaults within minigrid.scss
 //-- Overwrite with your own variables
 
 //Total Columns
