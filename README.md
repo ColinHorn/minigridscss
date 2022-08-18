@@ -1,6 +1,7 @@
 # MiniGrid.scss
 
 A very minimal grid mixin, allowing you to set your breakpoints, container and gutters in seconds.
+Declare how many columns your elements span across.
 
 < 2kb in size.
 
@@ -51,6 +52,9 @@ Variables relate to mixin as such:
 //-- Deafults within minigrid.scss
 //-- Overwrite with your own variables
 
+//Total Columns
+$totalColumns: 12;
+
 //Container Widths
 $mobileWidth:95vw;
 $maxWidth: 1430px;
@@ -62,6 +66,7 @@ $screen-md: 992px;
 $screen-lg: 1230px;
 $screen-xl: 1460px;
 
+// Guttter Widths
 $gutter-width:15px;
 $gutter-width-xl:25px;
 

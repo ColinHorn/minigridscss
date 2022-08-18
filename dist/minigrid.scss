@@ -1,4 +1,8 @@
 //*DEFAULTS*//
+
+//Total Columns
+$totalColumns: 12;
+
 //Container Widths
 $mobileWidth:95vw;
 $maxWidth: 1430px;
@@ -54,23 +58,23 @@ $gutter-width-xl:25px;
   box-sizing: border-box;
 
   @media (min-width: $screen-xs) {
-    width: calc($xs / 12 * 100%);
+    width: calc($xs / $totalColumns * 100%);
   }
 
   @media (min-width: $screen-sm) {
-    width: calc($sm / 12 * 100%);
+    width: calc($sm / $totalColumns * 100%);
   }
 
   @media (min-width: $screen-md) {
-    width: calc($md / 12 * 100%);
+    width: calc($md / $totalColumns * 100%);
   }
 
   @media (min-width: $screen-lg) {
-    width: calc($lg / 12 * 100%);
+    width: calc($lg / $totalColumns * 100%);
   }
 
   @media (min-width: $screen-xl) {
-    width: calc($xl / 12 * 100%);
+    width: calc($xl / $totalColumns * 100%);
     padding-left: if($padding, $gutter-width-xl, 0);
     padding-right: if($padding, $gutter-width-xl, 0);
   }
